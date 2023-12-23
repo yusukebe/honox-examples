@@ -8,10 +8,10 @@
   },
   "private": true,
   "dependencies": {
-    "hono": "^3.11.9",
-    "honox": "^0.0.0"
+    "hono": "^3.11.9"
   },
   "devDependencies": {
+    "honox": "^0.0.0",
     "vite": "^5.0.10",
     "wrangler": "^3.22.1"
   },
