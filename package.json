@@ -1,0 +1,10 @@
+{
+  "name": "hono-x-examples",
+  "packageManager": "yarn@4.0.2",
+  "workspaces": [
+    "projects/*"
+  ],
+  "resolutions": {
+    "honox": "portal:/Users/yusuke/work/honojs/honox"
+  }
+}

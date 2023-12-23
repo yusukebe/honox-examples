@@ -1,0 +1,19 @@
+{
+  "name": "basic",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "deploy": "$npm_execpath build && wrangler pages deploy ./dist"
+  },
+  "private": true,
+  "dependencies": {
+    "hono": "^3.11.9",
+    "honox": "^0.0.0"
+  },
+  "devDependencies": {
+    "vite": "^5.0.10",
+    "wrangler": "^3.22.1"
+  },
+  "packageManager": "yarn@4.0.2"
+}
