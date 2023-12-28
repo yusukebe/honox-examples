@@ -1,0 +1,28 @@
+{
+  "name": "blog",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && vite build --mode client",
+    "deploy": "$npm_execpath build && wrangler pages deploy ./dist"
+  },
+  "private": true,
+  "dependencies": {
+    "@hono/zod-validator": "^0.1.11",
+    "@markdoc/markdoc": "^0.4.0",
+    "alpinejs": "^3.13.3",
+    "dayjs": "^1.11.10",
+    "hono": "^3.11.11",
+    "honox": "^0.0.0",
+    "htmx.org": "^1.9.10",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@hono/eslint-config": "^0.0.3",
+    "eslint": "^8.56.0",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.10",
+    "wrangler": "^3.22.1"
+  },
+  "packageManager": "yarn@4.0.2"
+}
