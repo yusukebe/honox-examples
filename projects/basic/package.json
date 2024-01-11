@@ -3,12 +3,13 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && vite build --mode client",
+    "preview": "wrangler pages dev ./dist",
     "deploy": "$npm_execpath build && wrangler pages deploy ./dist"
   },
   "private": true,
   "dependencies": {
-    "hono": "^3.11.9"
+    "hono": "./hono-4.0.0-rc.0.tgz"
   },
   "devDependencies": {
     "honox": "^0.0.0",
