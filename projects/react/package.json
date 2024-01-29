@@ -9,15 +9,16 @@
   "private": true,
   "dependencies": {
     "@hono/react-renderer": "^0.0.2",
-    "hono": "^3.11.9",
+    "hono": "4.0.0-rc.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@hono/vite-cloudflare-pages": "^0.2.2",
     "@types/react": "^18.2.45",
     "@types/react-dom": "^18.2.18",
-    "honox": "^0.0.0",
-    "vite": "^5.0.10",
+    "honox": "^0.0.1",
+    "vite": "^5.0.12",
     "wrangler": "^3.22.1"
   },
   "packageManager": "yarn@4.0.2"

@@ -10,18 +10,14 @@
   "dependencies": {
     "@hono/zod-validator": "^0.1.11",
     "@markdoc/markdoc": "^0.4.0",
-    "alpinejs": "^3.13.3",
     "dayjs": "^1.11.10",
-    "hono": "4.0.0-rc.0",
-    "honox": "^0.0.0",
-    "htmx.org": "^1.9.10",
+    "hono": "4.0.0-rc.3",
+    "honox": "^0.0.1",
     "zod": "^3.22.4"
   },
   "devDependencies": {
-    "@hono/eslint-config": "^0.0.3",
-    "eslint": "^8.56.0",
-    "typescript": "^5.3.3",
-    "vite": "^5.0.10",
+    "@hono/vite-cloudflare-pages": "^0.2.2",
+    "vite": "^5.0.11",
     "wrangler": "^3.22.1"
   },
   "packageManager": "yarn@4.0.2"

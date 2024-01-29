@@ -1,6 +1,7 @@
-import { getEnv } from '@hono/vite-dev-server/cloudflare-pages'
+import pagesPlugin from '@hono/vite-dev-server/cloudflare-pages'
 import honox from 'honox/vite'
 import { defineConfig } from 'vite'
+import pagesBuild from '@hono/vite-cloudflare-pages'
 
 export default defineConfig(({ mode }) => {
   if (mode === 'client') {
@@ -20,23 +21,18 @@ export default defineConfig(({ mode }) => {
     }
   } else {
     return {
-      build: {
-        minify: true,
-        rollupOptions: {
-          output: {
-            entryFileNames: '_worker.js'
-          }
-        }
-      },
       plugins: [
         honox({
           devServer: {
-            env: getEnv({
-              d1Databases: ['DB'],
-              d1Persist: true
-            })
+            plugins: [
+              pagesPlugin({
+                d1Databases: ['DB'],
+                d1Persist: true
+              })
+            ]
           }
-        })
+        }),
+        pagesBuild()
       ]
     }
   }

@@ -1,4 +1,4 @@
-import { useState } from 'hono/jsx/hooks'
+import { useState } from 'hono/jsx'
 
 export default function Counter() {
   const [count, setCount] = useState(0)

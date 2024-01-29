@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite'
 import honox from 'honox/vite'
+import pages from '@hono/vite-cloudflare-pages'
 
 export default defineConfig(({ mode }) => {
   if (mode === 'client') {
@@ -19,15 +20,7 @@ export default defineConfig(({ mode }) => {
     }
   } else {
     return {
-      build: {
-        rollupOptions: {
-          output: {
-            entryFileNames: '_worker.js'
-          }
-        },
-        minify: true
-      },
-      plugins: [honox()]
+      plugins: [honox(), pages()]
     }
   }
 })
