@@ -14,8 +14,8 @@
   "devDependencies": {
     "@hono/vite-cloudflare-pages": "^0.2.2",
     "honox": "^0.0.1",
-    "vite": "^5.0.10",
-    "wrangler": "^3.22.1"
+    "vite": "^5.0.12",
+    "wrangler": "^3.25.0"
   },
   "packageManager": "yarn@4.0.2"
 }
