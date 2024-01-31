@@ -1,4 +1,4 @@
-import 'hono'
+import {} from 'hono'
 
 type Head = {
   title?: string

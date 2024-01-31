@@ -1,4 +1,4 @@
-import 'hono'
+import {} from 'hono'
 
 declare module 'hono' {
   interface Env {
