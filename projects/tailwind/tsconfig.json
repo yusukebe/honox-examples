@@ -2,8 +2,12 @@
   "compilerOptions": {
     "target": "ESNext",
     "module": "ESNext",
-    "moduleResolution": "Bundler",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
     "strict": true,
+    "lib": [
+      "esnext"
+    ],
     "types": [
       "vite/client"
     ],

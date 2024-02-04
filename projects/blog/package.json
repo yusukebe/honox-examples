@@ -3,7 +3,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && vite build --mode client",
+    "build": "vite build --mode client && vite build",
     "deploy": "$npm_execpath build && wrangler pages deploy ./dist"
   },
   "private": true,
@@ -11,12 +11,12 @@
     "@hono/zod-validator": "^0.1.11",
     "@markdoc/markdoc": "^0.4.0",
     "dayjs": "^1.11.10",
-    "hono": "4.0.0-rc.3",
-    "honox": "^0.0.1",
+    "hono": "4.0.0-rc.4",
+    "honox": "../../honox-0.0.2.tgz",
     "zod": "^3.22.4"
   },
   "devDependencies": {
-    "@hono/vite-cloudflare-pages": "^0.2.2",
+    "@hono/vite-cloudflare-pages": "^0.2.3",
     "vite": "^5.0.12",
     "wrangler": "^3.25.0"
   },
