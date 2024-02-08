@@ -9,12 +9,12 @@
   },
   "private": true,
   "dependencies": {
-    "hono": "4.0.0-rc.4"
+    "hono": "4.0.0-rc.4",
+    "honox": "^0.0.3"
   },
   "devDependencies": {
     "@hono/vite-cloudflare-pages": "^0.2.3",
     "autoprefixer": "^10.4.17",
-    "honox": "^0.0.3",
     "postcss": "^8.4.33",
     "tailwindcss": "^3.4.1",
     "vite": "^5.0.12",

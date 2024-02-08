@@ -4,6 +4,7 @@ node_modules
 *.tgz
 yarn.lock
 dist
+.hono
 
 
 .yarn/*
