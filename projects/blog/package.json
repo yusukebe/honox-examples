@@ -11,8 +11,8 @@
     "@hono/zod-validator": "^0.1.11",
     "@markdoc/markdoc": "^0.4.0",
     "dayjs": "^1.11.10",
-    "hono": "4.0.0-rc.4",
-    "honox": "^0.0.3",
+    "hono": "^4.0.0",
+    "honox": "^0.1.0",
     "zod": "^3.22.4"
   },
   "devDependencies": {
