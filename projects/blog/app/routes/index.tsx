@@ -2,7 +2,7 @@ import dayjs from 'dayjs/esm'
 import relativeTime from 'dayjs/esm/plugin/relativeTime'
 import { css } from 'hono/css'
 import type { FC } from 'hono/jsx'
-import { createRoute } from 'honox/factory'
+import { createRoute } from '../factory'
 import { classButton } from '../components/button'
 import Time from '../components/time'
 import Title from '../components/title'
@@ -42,31 +42,31 @@ export const GET = createRoute(async (c) => {
   const articles = await findAllArticles(c.env.DB)
 
   return c.render(
-    <section
-      class={css`
-        margin-top: 1rem;
-      `}
-    >
-      <div
+    <>
+      <title>Hono Blog</title>
+      <section
         class={css`
-          justify-content: space-between;
-          align-items: center;
-          display: flex;
+          margin-top: 1rem;
         `}
       >
-        <Title>Posts</Title>
-        <a class={classButton} href="/articles/create">
-          Create Post
-        </a>
-      </div>
-      <ul>
-        {articles.map((article) => (
-          <ArticleList article={article} />
-        ))}
-      </ul>
-    </section>,
-    {
-      title: 'Hono Blog'
-    }
+        <div
+          class={css`
+            justify-content: space-between;
+            align-items: center;
+            display: flex;
+          `}
+        >
+          <Title>Posts</Title>
+          <a class={classButton} href="/articles/create">
+            Create Post
+          </a>
+        </div>
+        <ul>
+          {articles.map((article) => (
+            <ArticleList article={article} />
+          ))}
+        </ul>
+      </section>
+    </>
   )
 })

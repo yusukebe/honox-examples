@@ -1,5 +1,5 @@
 import { zValidator } from '@hono/zod-validator'
-import { createRoute } from 'honox/factory'
+import { createRoute } from '../../factory'
 import { z } from 'zod'
 import { parseMarkdown } from '../../utils'
 

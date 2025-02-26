@@ -1,0 +1,19 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "honox-examples-blog",
+  "main": "./dist/index.js",
+  "compatibility_date": "2024-04-01",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "assets": {
+    "directory": "./dist"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "hono-blog-demo",
+      "database_id": "c1ec051a-3e19-4c89-92fa-bdc2b3f69e1c"
+    }
+  ]
+}

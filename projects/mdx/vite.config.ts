@@ -14,8 +14,8 @@ export default defineConfig(() => {
       ssg({ entry }),
       mdx({
         jsxImportSource: 'hono/jsx',
-        remarkPlugins: [remarkFrontmatter, remarkMdxFrontmatter],
-      }),
-    ],
+        remarkPlugins: [remarkFrontmatter, remarkMdxFrontmatter]
+      })
+    ]
   }
 })
