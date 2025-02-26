@@ -1,7 +1,7 @@
 import { zValidator } from '@hono/zod-validator'
 import { css } from 'hono/css'
 import type { FC } from 'hono/jsx'
-import { createRoute } from 'honox/factory'
+import { createRoute } from '../../factory'
 import { z } from 'zod'
 import { classButton } from '../../components/button'
 import Title from '../../components/title'
@@ -62,7 +62,7 @@ const Page: FC<{ data?: Data }> = ({ data }) => {
     >
       <Title>Create Post</Title>
       <div x-data>
-        <form class={classForm} method="POST">
+        <form class={classForm} method="post">
           <div class={classDivInputs}>
             <div>
               <label class={grayColor} htmlFor="title">
@@ -88,7 +88,7 @@ const Page: FC<{ data?: Data }> = ({ data }) => {
 }
 
 export default createRoute((c) => {
-  return c.render(<Page />, { hasScript: true })
+  return c.render(<Page />)
 })
 
 const schema = z.object({
@@ -100,9 +100,7 @@ export const POST = createRoute(
   zValidator('form', schema, (result, c) => {
     if (!result.success) {
       const { title, content } = result.data
-      return c.render(<Page data={{ title, content, error: result.error.flatten().fieldErrors }} />, {
-        hasScript: true
-      })
+      return c.render(<Page data={{ title, content, error: result.error.flatten().fieldErrors }} />)
     }
   }),
   async (c) => {

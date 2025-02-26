@@ -3,22 +3,15 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --mode client && vite build",
-    "deploy": "$npm_execpath run build && wrangler pages deploy ./dist"
+    "build": "vite build --mode client && vite build && cp ./.assetsignore ./dist",
+    "preview": "wrangler dev",
+    "deploy": "$npm_execpath run build && wrangler deploy"
   },
   "private": true,
   "dependencies": {
     "@hono/zod-validator": "^0.1.11",
     "@markdoc/markdoc": "^0.4.0",
     "dayjs": "^1.11.10",
-    "hono": "^4.0.3",
-    "honox": "^0.1.9",
     "zod": "^3.22.4"
-  },
-  "devDependencies": {
-    "@hono/vite-cloudflare-pages": "^0.2.3",
-    "vite": "^5.0.12",
-    "wrangler": "^3.27.0"
-  },
-  "packageManager": "yarn@4.0.2"
+  }
 }

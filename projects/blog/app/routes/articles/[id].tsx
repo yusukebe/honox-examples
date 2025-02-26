@@ -1,7 +1,7 @@
 import dayjs from 'dayjs/esm'
 import relativeTime from 'dayjs/esm/plugin/relativeTime'
 import { css } from 'hono/css'
-import { createRoute } from 'honox/factory'
+import { createRoute } from '../../factory'
 import Time from '../../components/time'
 import { findArticleById } from '../../db'
 import { parseMarkdown } from '../../utils'
@@ -23,7 +23,7 @@ const titleClass = css`
 `
 
 export default createRoute(async (c) => {
-  const { id } = c.req.param()
+  const { id } = c.req.param<'/:id'>()
   const article = await findArticleById(c.env.DB, id)
 
   if (!article) {

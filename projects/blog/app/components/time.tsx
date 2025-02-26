@@ -1,5 +1,5 @@
 import { css } from 'hono/css'
-import type { FC } from 'hono/jsx'
+import type { FC, PropsWithChildren } from 'hono/jsx'
 
 const timeClass = css`
   color: rgb(107 114 128);
@@ -7,7 +7,7 @@ const timeClass = css`
   line-height: 1.25rem;
 `
 
-const Time: FC<{ created_at: string }> = ({ children, created_at }) => {
+const Time = ({ children, created_at }: PropsWithChildren<{ created_at: string }>) => {
   return (
     <time class={timeClass} dateTime={created_at}>
       {children}
