@@ -1,7 +1,10 @@
 {
   "name": "hono-x-examples",
   "workspaces": [
-    "projects/*"
+    "projects/basic",
+    "projects/blog",
+    "projects/mdx",
+    "projects/tailwind"
   ],
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20250224.0",

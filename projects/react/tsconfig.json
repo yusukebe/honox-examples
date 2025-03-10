@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "esModuleInterop": true,
+    "strict": true,
+    "lib": [
+      "DOM",
+      "ESNext"
+    ],
+    "types": [
+      "vite/client"
+    ],
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
+  },
+}
